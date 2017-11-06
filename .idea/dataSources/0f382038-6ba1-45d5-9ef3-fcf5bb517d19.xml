@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="u-home@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="u-home">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db_shop"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="jiepai"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <table id="9" parent="2" name="chuanglian"/>
+    <table id="10" parent="2" name="deng"/>
+    <table id="11" parent="2" name="guangzhao"/>
+    <table id="12" parent="2" name="kaiguang"/>
+    <table id="13" parent="2" name="kongtiao"/>
+    <table id="14" parent="2" name="user"/>
+    <table id="15" parent="2" name="wenshidu"/>
+    <table id="16" parent="2" name="yanwu"/>
+    <column id="17" parent="9" name="clid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="clname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="jiaodu">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <key id="20" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>clid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="10" name="did">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="10" name="deng">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="23" parent="10" name="dname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="24" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>did</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="11" name="gzid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="11" name="gzname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="qiangdu">
+      <Position>3</Position>
+      <DataType>double(3,2)|0</DataType>
+    </column>
+    <key id="28" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>gzid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="12" name="kgid">
+      <Position>1</Position>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="12" name="deng">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="31" parent="12" name="jiaodu">
+      <Position>3</Position>
+      <DataType>double(255,1)|0</DataType>
+    </column>
+    <column id="32" parent="12" name="wendu">
+      <Position>4</Position>
+      <DataType>double(255,1)|0</DataType>
+    </column>
+    <column id="33" parent="12" name="shidu">
+      <Position>5</Position>
+      <DataType>double(255,2)|0</DataType>
+    </column>
+    <column id="34" parent="12" name="nongdu">
+      <Position>6</Position>
+      <DataType>double(255,2)|0</DataType>
+    </column>
+    <column id="35" parent="12" name="qiangdu">
+      <Position>7</Position>
+      <DataType>double(255,2)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="user_w">
+      <Position>8</Position>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <index id="37" parent="12" name="kaiguang_ibfk_1">
+      <ColNames>user_w</ColNames>
+    </index>
+    <key id="38" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>kgid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="12" name="kaiguang_ibfk_1">
+      <ColNames>user_w</ColNames>
+      <RefSchemaName>u-home</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <column id="40" parent="13" name="ktid">
+      <Position>1</Position>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="ktname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="wendu">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="43" parent="13" name="moshi">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="kaiguang">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="fengli">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="dingshi">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="47" parent="13" name="fengxiang">
+      <Position>8</Position>
+      <DataType>double(255,1)|0</DataType>
+    </column>
+    <column id="48" parent="13" name="saofeng">
+      <Position>9</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="49" parent="13" name="shuimian">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="50" parent="13" name="shuxian">
+      <Position>11</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="51" parent="13" name="user_w">
+      <Position>12</Position>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <index id="52" parent="13" name="user_w">
+      <ColNames>user_w</ColNames>
+    </index>
+    <key id="53" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ktid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="13" name="kongtiao_ibfk_1">
+      <ColNames>user_w</ColNames>
+      <RefSchemaName>u-home</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <column id="55" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="14" name="userno">
+      <Position>2</Position>
+      <DataType>varchar(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="14" name="password">
+      <Position>3</Position>
+      <DataType>varchar(1000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="14" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="59" parent="14" name="id">
+      <ColNames>id</ColNames>
+    </index>
+    <index id="60" parent="14" name="name">
+      <ColNames>name</ColNames>
+    </index>
+    <key id="61" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="15" name="wsdid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="15" name="wsdname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="15" name="wendu">
+      <Position>3</Position>
+      <DataType>double(2,1)|0</DataType>
+    </column>
+    <column id="65" parent="15" name="shidu">
+      <Position>4</Position>
+      <DataType>double(2,1)|0</DataType>
+    </column>
+    <column id="66" parent="15" name="wenshidu">
+      <Position>5</Position>
+      <DataType>double(2,1)|0</DataType>
+    </column>
+    <key id="67" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>wsdid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="16" name="ywid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="16" name="nongdu">
+      <Position>2</Position>
+      <DataType>double(3,2)|0</DataType>
+    </column>
+    <column id="70" parent="16" name="ywname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="71" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ywid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
